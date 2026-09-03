@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="task-1.css">
+    <!--  This tells the browser which character encoding
+          the webpage is using. UTF-8 supports most characters.  -->
+    <meta charset="UTF-8">
+    <!--  This is important for responsive design.
+          width=device-width:
+          Makes the page width equal to the device screen width.
+          initial-scale=1.0:
+          Sets the initial zoom level to 100%.  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  This text appears in the browser tab.  -->
+    <title>My Portfolio</title>
+    <!--  Connects this HTML file to our external CSS file.
+          The CSS file contains the design and layout of our portfolio.  -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--  MAIN PORTFOLIO CARD
+          This is the main container that holds all the
+         information about the person.  -->
+    <div class="portfolio-card">
+        <!--  PROFILE SECTION
+              This section contains:
+              - Profile picture
+              - Name
+              - Job/designation
+              - Short introduction  -->
+              <div class="profile-section">
+            <!--  Profile image.
+              "src" tells the browser where the image is.
+              "alt" provides alternative text if the image cannot be displayed.  -->
+              <img
+                src="https://avatars.githubusercontent.com/u/213925241?s=400&u=6e0f76a442042a2eec966f2ab9262f9cbaf9911f&v=4"
+                alt="Anjali Kumari"
+                class="profile-image"
+            >
+            <!-- Main name of the person -->
+            <h1>ANJALI KUMARI</h1>
+            <!-- Professional designation -->
+            <p class="designation">
+                Web Developer
+            </p>
+            <!-- Short introduction -->
+            <p class="intro">
+                Hello! I am a passionate developer who enjoys
+                creating modern and responsive websites.
+            </p>
+        </div>
+        <!--  ABOUT SECTION  -->
+            <section class="section">
+            <!-- Section heading -->
+            <h2>About Me</h2>
+             <!--  Replace this text with your own
+                personal introduction.  -->
+                <p>
+                I am interested in web development and enjoy
+                learning HTML, CSS and JavaScript. I like
+                building simple, attractive and user-friendly
+                websites.
+            </p>
+        </section>
+         <!--   SKILLS SECTION
+            Each skill is placed inside a <span>.
+            CSS will make these look like small tags.  -->
+            <section class="section">
+             <h2>My Skills</h2>
+             <!-- Container for all skills -->
+            <div class="skills">
+                <span class="skill">HTML</span>
+                <span class="skill">CSS</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">Git</span>
+                </div>
+        </section>
+        <!--  PROJECTS SECTION
+            This section displays projects that you have
+            completed.  -->
+            <section class="section">
+            <h2>My Projects</h2>
+            <!-- First project -->
+            <div class="project">
+                <h3>Portfolio Website</h3>
+                <p>
+                    A responsive personal portfolio website
+                    created using HTML, CSS and JavaScript.
+                </p>
+                 <!--  This button can later be connected
+                    to the actual project URL.  -->
+                    <button class="project-button">
+                    View Project
+                </button>
+            </div>
+            <!-- Second project -->
+            <div class="project">
+                <h3>To-Do List</h3>
+                <p>
+                    A simple JavaScript project that allows
+                    users to add and remove tasks.
+                </p>
+                <button class="project-button">
+                    View Project
+                </button>
+            </div>
+        </section>
+        <!--  CONTACT SECTION -->
+             <section class="section contact">
+            <h2>Contact Me</h2>
+            <!-- Contact information -->
+            <p>
+                Email: aanjalirai2006@gmail.com
+            </p>
+            <p>
+                Phone: +91 9873577053
+            </p>
+            <!-- This button has an ID
+                JavaScript will use this ID to find the
+                button and perform an action when it is clicked -->
+                <button id="contactButton">
+                Contact Me
+            </button>
+            <!--JavaScript will put a message inside
+                this paragraph after the button is clicked -->
+                <p id="message"></p>
+        </section>
+    </div>
+    <!--  JAVASCRIPT
+        We put the script at the end of <body> so that
+        the HTML elements are loaded before JavaScript
+        tries to access them.  -->
+        <script src="task-1.js"></script>
+</body>
+</html>
