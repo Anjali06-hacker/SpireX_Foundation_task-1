@@ -1,0 +1,208 @@
+/*RESET
+Browsers have their own default margins and padding.
+We remove them so that we can control the design ourselves.*/
+* {
+    margin: 0;
+    padding: 0;
+    /*  Makes width and height calculations easier.
+        Padding and borders are included in the element's
+        total width and height.    */
+    box-sizing: border-box;
+}
+/*BODY*/
+
+body {
+    /* Basic font used throughout the webpage */
+    font-family: Arial, sans-serif;
+    /* Light background behind the portfolio card */
+    background-color: #eef2f7;
+    /* Makes the body at least as tall as the screen    */
+    min-height: 100vh;
+    /* Flexbox allows us to easily center the portfolio.    */
+    display: flex;
+    /* Centers the card horizontally */
+    justify-content: center;
+    /* Centers the card vertically */
+    align-items: center;
+    /*  Prevents the card from touching the edge
+        of the screen.    */
+    padding: 30px;
+}
+/*MAIN PORTFOLIO CARD*/
+.portfolio-card {
+    /*  The card can use the available width,
+        but it won't become wider than 700px.    */
+    width: 100%;
+    max-width: 700px;
+    /* White card background */
+    background-color: white;
+    /* Space inside the card */
+    padding: 35px;
+    /* Rounded corners */
+    border-radius: 15px;
+    /*  Creates a shadow around the card.
+        First value = horizontal position
+        Second value = vertical position
+        Third value = blur
+        Last value = shadow transparency    */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+/*PROFILE SECTION*/
+.profile-section {
+    /* Centers the profile information */
+    text-align: center;
+    /* Space below the profile */
+    padding-bottom: 25px;
+    /*  A small line separates the profile
+        from the rest of the portfolio.    */
+    border-bottom: 1px solid #ddd;
+}
+/*PROFILE IMAGE*/
+.profile-image {
+    /* Width of the image */
+    width: 120px;
+    /* Height of the image */
+    height: 120px;
+    /*50% border radius turns a square image
+        into a circle.    */
+    border-radius: 50%;
+    /*  Makes sure the image doesn't look stretched.    */
+    object-fit: cover;
+   /* Space below the image */
+    margin-bottom: 15px;
+}
+/*NAME*/
+.profile-section h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+/*DESIGNATION*/
+.designation {
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+/*INTRODUCTION*/
+.intro {
+    color: #666;
+    /*  Increases the space between lines,
+        making the paragraph easier to read.    */
+    line-height: 1.6;
+}
+/*COMMON SECTION
+This class is reused by About, Skills, Projects
+and Contact sections.*/
+.section {
+    /* Adds space above each section */
+    margin-top: 30px;
+}
+/*Section headings*/
+.section h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+/*Paragraphs inside sections*/
+.section p {
+    color: #555;
+    line-height: 1.7;
+}
+/*SKILLS*/
+.skills {
+    /*  Flexbox puts the skills next to each other
+        when enough space is available.    */
+    display: flex;
+    /*  Allows the skills to move to the next line
+        on smaller screens.    */
+    flex-wrap: wrap;
+    /* Space between skill tags */
+    gap: 10px;
+}
+/*Individual skill tags*/
+.skill {
+    background-color: #e8f0fe;
+    /* Space inside each tag */
+    padding: 8px 14px;
+    /* Makes the tag rounded */
+    border-radius: 20px;
+    font-size: 14px;
+    color: #333;
+}
+/*PROJECT CARD*/
+.project {
+    /* Creates a border around the project */
+    border: 1px solid #ddd;
+    /* Space inside the project */
+    padding: 20px;
+    /* Rounded project corners */
+        border-radius: 10px;
+    /* Space between projects */
+    margin-bottom: 15px;
+}
+/*Project title*/
+.project h3 {
+    margin-bottom: 8px;
+}
+/*PROJECT BUTTON*/
+.project-button {
+    margin-top: 15px;
+    padding: 8px 14px;
+    /* Removes the browser's default button border.*/
+    border: none;
+    border-radius: 6px;
+    background-color: #333;
+    color: white;
+    /*  Changes the mouse cursor into a hand
+        when hovering over the button.    */
+    cursor: pointer;
+}
+/*Button hover effect.
+This runs when the user places the mouse
+over the project button.*/
+.project-button:hover {
+    opacity: 0.8;
+}
+/*CONTACT BUTTON*/
+#contactButton {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+/*Change button appearance on hover.*/
+#contactButton:hover {
+    background-color: #555;
+}
+/*JAVASCRIPT MESSAGE
+This paragraph is initially empty.
+JavaScript will insert text into it when
+the Contact Me button is clicked.*/
+#message {
+    margin-top: 15px;
+    font-weight: bold;
+}
+/*RESPONSIVE DESIGN
+These styles apply when the screen is 600px
+wide or smaller.
+This makes the portfolio easier to use on
+phones and small tablets.*/
+@media (max-width: 600px) {
+    /*Reduce the outside spacing on small screens.*/
+    body {
+        padding: 15px;
+    }
+    /*Reduce the card's internal spacing.*/
+    .portfolio-card {
+        padding: 25px 20px;
+    }
+    /* Make the name slightly smaller on phones.*/
+    .profile-section h1 {
+        font-size: 26px;
+    }
+   /*Make section headings slightly smaller.*/
+        .section h2 {
+        font-size: 20px;
+    }
+}
